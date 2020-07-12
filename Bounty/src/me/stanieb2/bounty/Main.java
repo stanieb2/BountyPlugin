@@ -3,11 +3,14 @@ package me.stanieb2.bounty;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.stanieb2.bounty.commands.SetBountyCommand;
+
 public class Main extends JavaPlugin implements Listener{
 	
 //	private Logger logger;
 	@Override 
 	public void onEnable() {
+		new SetBountyCommand(this);
 		this.getServer().getPluginManager().registerEvents(this, this);
 //		this.logger = (Logger) this.getLogger();
 
@@ -16,7 +19,6 @@ public class Main extends JavaPlugin implements Listener{
 	@Override
 	public void onDisable() {
 
-		// unload all chunks
 	}
 	
 }
