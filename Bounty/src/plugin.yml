@@ -1,0 +1,8 @@
+main: me.stanieb2.bounty.Main
+name: Bounty
+version: 1.0
+author: stanieb2
+
+api-version: 1.16
+
+commands:
