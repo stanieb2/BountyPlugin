@@ -4,6 +4,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.stanieb2.bounty.commands.SetBountyCommand;
+import me.stanieb2.bounty.death.DeathListener;
 
 public class Main extends JavaPlugin implements Listener{
 	
@@ -11,7 +12,7 @@ public class Main extends JavaPlugin implements Listener{
 	@Override 
 	public void onEnable() {
 		new SetBountyCommand(this);
-		this.getServer().getPluginManager().registerEvents(this, this);
+		new DeathListener(this);
 //		this.logger = (Logger) this.getLogger();
 
 	}
